@@ -1,0 +1,16 @@
+version: '3'
+
+services: 
+    lab:
+        # this is for allowing it to run in detached mode
+        tty: true
+        stdin_open: true
+
+        build:
+            context: ./
+            dockerfile: lab.dockerfile
+        image: aburns/lab
+
+        container_name: lab
+        
+              
